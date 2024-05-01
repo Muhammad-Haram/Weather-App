@@ -54,7 +54,7 @@ const page = () => {
       <>
         <div>
           <Current data={data} />
-          <WeekForcast />
+          <WeekForcast data={data} />
         </div>
         <div>
           <WeatherDetails />

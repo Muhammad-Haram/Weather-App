@@ -1,6 +1,23 @@
-import { getCurrentDate } from "../utils/currentDate"
+import { getCurrentDate } from "../utils/currentDate";
+import { FaLocationDot } from "react-icons/fa6";
 
-const Current = ({ data }) => {
+interface CurrentProps {
+    data: {
+        current?: {
+            condition: {
+                icon: string;
+                text: string;
+            };
+            temp_f: number;
+        };
+        location?: {
+            name: string;
+            region: string;
+        };
+    };
+}
+
+const Current = ({ data }: CurrentProps) => {
     const weatherIcon = data.current ? data.current.condition.icon : null;
     const currentDate = getCurrentDate();
     return (
@@ -16,12 +33,25 @@ const Current = ({ data }) => {
                     </div>
                 )}
             </div>
-            {data.current ? (
-                <p className="text-5xl text-white">
-                    {data.current.temp_f.toFixed()}
-                    <span>°</span>
-                </p>
-            ) : null}
+            <div>
+                {data.current ? (
+                    <p className="text-5xl text-white">
+                        {data.current.temp_f.toFixed()}
+                        <span>°</span>
+                    </p>
+                ) : null}
+                {data.current ? <span className="text-white">{data.current.condition.text}</span> : null}
+            </div>
+            <div>
+                {data.location ? (
+                    <div className="flex items-center text-black bg-white/90 px-2 py-2 rounded-xl">
+                        <FaLocationDot />
+                        <span>
+                            {data.location.name}, {data.location.region}
+                        </span>
+                    </div>
+                ) : null}
+            </div>
         </div>
     )
 }
