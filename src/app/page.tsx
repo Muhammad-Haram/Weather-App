@@ -1,10 +1,12 @@
 "use client"
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Input from './components/Input'
 import Current from './components/Current'
 import WeatherDetails from './components/WeatherDetails'
 import WeekForcast from './components/WeekForecast'
+import weatherLogo from './3d.png'
 
 const page = () => {
 
@@ -69,9 +71,14 @@ const page = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center p-12">
           <Input handleSearch={handleSearch} setLocation={setLocation} />
-          <h1 className="mb-8 md:mb-0 order-1 text-white text-2xl py-2 px-4 rounded-xl italic font-bold">
-            Weather App.
-          </h1>
+          <Image
+            className='mb-8 md:mb-0 order-1 py-2 px-4'
+            src={weatherLogo}
+            width={180}
+            height={180}
+            alt="Picture of the author"
+          />
+
         </div>
         {content}
       </div>
