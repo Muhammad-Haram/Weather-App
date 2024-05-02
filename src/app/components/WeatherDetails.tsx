@@ -34,7 +34,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <h3>Wind Speed</h3>
             <h3
               className="text-white bg-black/25 rounded-xl mt-1"
-              aria-label={`Wind Speed: ${data.current.wind_mph} mph`}
             >
               {data.current.wind_mph} mph
             </h3>
@@ -43,7 +42,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
         <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
           <div className="text-2xl">
             <h3>Humidity</h3>
-            <h3 className="text-white bg-black/25 rounded-xl mt-1" aria-label={`Humidity: ${data.current.humidity}%`}>
+            <h3 className="text-white bg-black/25 rounded-xl mt-1">
               {data.current.humidity}%
             </h3>
           </div>
@@ -53,7 +52,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <h3>Wind Direction</h3>
             <h3
               className="text-white bg-black/25 rounded-xl mt-1"
-              aria-label={`Wind Direction: ${data.current.wind_dir}`}
             >
               {data.current.wind_dir}
             </h3>
@@ -64,7 +62,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <h3>Sunrise</h3>
             <h3
               className="text-white bg-black/25 rounded-xl mt-1 px-2"
-              aria-label={`Sunrise: ${data.forecast?.forecastday[0]?.astro.sunrise}`}
             >
               {data.forecast?.forecastday[0]?.astro.sunrise}
             </h3>
@@ -75,7 +72,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <h3>Sunset</h3>
             <h3
               className="text-white bg-black/25 rounded-xl mt-1 px-2"
-              aria-label={`Sunset: ${data.forecast?.forecastday[0]?.astro.sunset}`}
             >
               {data.forecast?.forecastday[0]?.astro.sunset}
             </h3>
@@ -86,7 +82,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <h3>Air Pressure</h3>
             <h3
               className="text-white bg-black/25 rounded-xl mt-1"
-              aria-label={`Air Pressure: ${data.current.pressure_mb} hPa`}
             >
               {data.current.pressure_mb} hPa
             </h3>
@@ -97,7 +92,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             <h3>Feels Like</h3>
             <h3
               className="text-white bg-black/25 rounded-xl mt-1"
-              aria-label={`Feels Like: ${data.current.feelslike_f}°`}
             >
               {data.current.feelslike_f}°
             </h3>
@@ -106,7 +100,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
         <div className="bg-white/50 flex p-4 items-center justify-center gap-6 rounded-xl">
           <div className="text-2xl">
             <h3>Visibility</h3>
-            <h3 className="text-white bg-black/25 rounded-xl mt-1" aria-label={`Visibility: ${data.current.vis_km} km`}>
+            <h3 className="text-white bg-black/25 rounded-xl mt-1">
               {data.current.vis_km} km
             </h3>
           </div>
