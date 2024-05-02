@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Input from './components/Input'
 import Current from './components/Current'
 import WeatherDetails from './components/WeatherDetails'
-import WeekForcast from './components/WeekForcast'
+import WeekForcast from './components/WeekForecast'
 
 const page = () => {
 
@@ -52,7 +52,7 @@ const page = () => {
   } else {
     content = (
       <>
-        <div>
+        <div className="flex md:flex-row flex-col p-12 items-center justify-between mt-[-4rem] gap-10">
           <Current data={data} />
           <WeekForcast data={data} />
         </div>
@@ -75,7 +75,7 @@ const page = () => {
         </div>
         {content}
       </div>
-    </div>
+    </div >
   )
 }
 
