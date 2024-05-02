@@ -9,7 +9,7 @@ const Input = ({ handleSearch, setLocation }: InputProps) => {
     return (
         <form className="flex items-center md:w-2/4 w-full order-2 md:order-1"
         >
-            < input type="text" className="w-full rounded-sm p-1 outline-none text-black" placeholder="Search..."
+            <input type="text" className="w-full rounded-sm p-1 outline-none text-black" placeholder="Press (Enter) to get Result"
                 onKeyDown={handleSearch}
                 onChange={(e) => { setLocation(e.target.value) }}
             />
