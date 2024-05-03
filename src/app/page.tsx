@@ -7,7 +7,7 @@ import WeekForcast from './components/WeekForecast'
 import weatherLogo from './3d.png'
 import React, { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [data, setData] = useState({})
   const [location, setLocation] = useState("")
   const [error, setError] = useState("")
@@ -83,4 +83,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
