@@ -1,16 +1,18 @@
 "use client"
+import { useState } from 'react'
 import Image from 'next/image'
 import Input from './components/Input'
 import Current from './components/Current'
 import WeatherDetails from './components/WeatherDetails'
 import WeekForcast from './components/WeekForecast'
 import weatherLogo from './3d.png'
-import React, { useState } from "react";
 
-const Page = () => {
-  const [data, setData] = useState({})
-  const [location, setLocation] = useState("")
-  const [error, setError] = useState("")
+const page = () => {
+
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState("");
+  const [error, setError] = useState("");
+
   const url = `https://api.weatherapi.com/v1/forecast.json?key=2e59c87adc894a0f801183150243004&q=${location}&days=7&aqi=yes&alerts=yes`
 
   const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -83,4 +85,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default page
