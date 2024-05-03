@@ -1,15 +1,13 @@
 "use client"
-
-import React, { useState } from 'react'
 import Image from 'next/image'
 import Input from './components/Input'
 import Current from './components/Current'
 import WeatherDetails from './components/WeatherDetails'
 import WeekForcast from './components/WeekForecast'
 import weatherLogo from './3d.png'
+import { useState } from 'react'
 
 const page = () => {
-
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
